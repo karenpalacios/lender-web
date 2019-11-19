@@ -100,7 +100,7 @@ if ( ! function_exists( 'construction_field_site_start' ) ) :
 
     function construction_field_site_start() {
         ?>
-        <div class="site row" id="page">
+        <div class="site" id="page">
         <?php
     }
 endif;
