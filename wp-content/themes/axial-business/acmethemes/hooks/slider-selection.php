@@ -138,7 +138,7 @@ function construction_field_slider_from_page(){
 							}
 							?>
                             <div class="slider-content <?php echo esc_attr( $text_align );?>">
-                                <div class="container">
+                                <!--div class="container"-->
                                     <?php the_widget( 'Mortgage_Step_Form_Widget' ); ?> 
 									<?php
 									if( FALSE && 1 == $construction_field_feature_slider_image_only ){
@@ -170,7 +170,7 @@ function construction_field_slider_from_page(){
 										<?php
 									}
 									?>
-                                </div>
+                                <!--/div-->
                             </div>
                         </div>
 						<?php

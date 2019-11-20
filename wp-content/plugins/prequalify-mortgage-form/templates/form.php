@@ -1,11 +1,9 @@
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
 <form id="mortgage-form" method="POST" action="<?php print esc_url( $_SERVER['REQUEST_URI'] ) ?>" >
     <h2>Get Pre-Qualified For A Home Loan</h2>
     <div>
         <h3>What type of loan are you looking for?</h3>
         <section>
-            <h4>What type of loan are you looking for?</h4>
+            <h4 class="title-loan-type">What type of loan are you looking for?</h4>
             <div class="btn-answer-container actions">
                 <a href="#next" class="btn-type btn-answer" data-value="Purchase">
                     <div class="icon">
@@ -30,7 +28,7 @@
         </section>
         <h3>How will you use the property?</h3>
         <section>
-            <h4>How will you use the property?</h4>
+            <h4 class="title-property-type" >How will you use the property?</h4>
             <div class="btn-answer-container actions">
                 <a href="#next" class="btn-type btn-answer" data-value="Primary Home">
                     <div class="icon">
@@ -64,7 +62,7 @@
         </section>
         <h3>What's your budget?</h3>
         <section>
-            <h4>What's your budget?</h4>
+            <h4 class="title-budget">What's your budget?</h4>
             <div class="budget-container actions">
                 <div id="slider-range"></div>
                 <input type="text" name="amount" id="amount" readonly>

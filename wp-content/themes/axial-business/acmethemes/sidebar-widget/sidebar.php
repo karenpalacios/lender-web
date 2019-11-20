@@ -135,8 +135,8 @@ function construction_field_widgets_init() {
         'description'	=> $construction_field_home_description,
         'before_widget' => '<div id="%1$s" class="col-12 widget %2$s">',
         'after_widget'  => '</div>',
-        'before_title'  => '<h2 class="widget-title init-animate zoomIn"><span>',
-        'after_title'   => '</span></h2>',
+        'before_title'  => '<h2 class="widget-title init-animate zoomIn">',
+        'after_title'   => '</h2>',
     ));
 
 	register_sidebar( array(

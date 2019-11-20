@@ -14,6 +14,8 @@ if ( ! class_exists( 'Construction_Field_Accordion' ) ) {
             'unique_id'             => '',
             'page_id'               => '',
             'title'                 => '',
+            'accordion_title'       => '',
+            'page_title'            => '',
             'at_all_page_items'     => '',
             'background_options'    => 'gray'
         );
@@ -38,6 +40,8 @@ if ( ! class_exists( 'Construction_Field_Accordion' ) ) {
             $unique_id              = esc_attr( $instance['unique_id'] );
 	        $page_id                = absint( $instance['page_id'] );
 	        $title                  = esc_attr( $instance['title'] );
+            $accordion_title        = sanitize_text_field( $instance['accordion_title'] );
+            $page_title             = sanitize_text_field( $instance['page_title'] );
 	        $at_all_page_items      = $instance['at_all_page_items'];
 	        $background_options     = esc_attr( $instance['background_options'] );
 	        ?>
@@ -51,6 +55,16 @@ if ( ! class_exists( 'Construction_Field_Accordion' ) ) {
                 <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title', 'construction-field' ); ?></label>
                 <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo $title; ?>" />
             </p>
+            <p>
+                <label for="<?php echo esc_attr( $this->get_field_id( 'accordion_title' ) ); ?>"><?php esc_html_e( 'Accordion Title', 'construction-field' ); ?></label>
+                <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'accordion_title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'accordion_title' ) ); ?>" type="text" value="<?php echo $accordion_title; ?>" />
+            </p>
+            <p>
+                <label for="<?php echo esc_attr( $this->get_field_id( 'page_title' ) ); ?>"><?php esc_html_e( 'Page Title', 'construction-field' ); ?></label>
+                <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'page_title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'page_title' ) ); ?>" type="text" value="<?php echo $page_title; ?>" />
+            </p>
+
+
             <p>
                 <label for="<?php echo esc_attr( $this->get_field_id( 'page_id' ) ); ?>"><?php esc_html_e( 'Select Page', 'construction-field' ); ?></label>
                 <br />
@@ -197,9 +211,11 @@ if ( ! class_exists( 'Construction_Field_Accordion' ) ) {
          */
         public function update( $new_instance, $old_instance ) {
             $instance = $old_instance;
-            $instance['unique_id']    = sanitize_key( $new_instance['unique_id'] );
-	        $instance['page_id']      = construction_field_sanitize_page( $new_instance['page_id'] );
-	        $instance['title']        = sanitize_text_field( $new_instance['title'] );
+            $instance['unique_id']       = sanitize_key( $new_instance['unique_id'] );
+	        $instance['page_id']         = construction_field_sanitize_page( $new_instance['page_id'] );
+	        $instance['title']           = sanitize_text_field( $new_instance['title'] );
+            $instance['accordion_title'] = sanitize_text_field( $new_instance['accordion_title'] );
+            $instance['page_title']      = sanitize_text_field( $new_instance['page_title'] );
 
 	        /*updated code*/
 	        $page_ids = array();
@@ -238,6 +254,10 @@ if ( ! class_exists( 'Construction_Field_Accordion' ) ) {
 	        $page_id            = absint( $instance['page_id'] );
 
 	        $title              = apply_filters( 'widget_title', !empty( $instance['title'] ) ? $instance['title'] : '', $instance, $this->id_base );
+            $accordion_title    = apply_filters( 'widget_title', !empty( $instance['accordion_title'] ) ? $instance['accordion_title'] : '', $instance, $this->id_base );
+            $page_title         = apply_filters( 'widget_title', !empty( $instance['page_title'] ) ? $instance['page_title'] : '', $instance, $this->id_base );
+
+
 	        $at_all_page_items  = $instance['at_all_page_items'];
 	        $background_options = esc_attr( $instance['background_options'] );
 	        $bg_gray_class      = $background_options == 'gray'?'at-gray-bg':'';
@@ -263,6 +283,14 @@ if ( ! class_exists( 'Construction_Field_Accordion' ) ) {
                         }
                         ?>
                         <div class="<?php echo $col;?>">
+
+                            <?php
+                                if( ! empty( $accordion_title ) ){
+                                    echo "<div class='accordion_title'>";
+                                    echo $args['before_title'] . esc_html( $accordion_title ) . $args['after_title'];
+                                    echo "</div>";
+                                }
+                            ?>
                             <div class="accordion-content">
 	                            <?php
 	                            $post_in = array();
@@ -319,8 +347,16 @@ if ( ! class_exists( 'Construction_Field_Accordion' ) ) {
 		                    if ( $service_query->have_posts() ):
 			                    while( $service_query->have_posts() ):$service_query->the_post();
 				                    ?>
-                                    <div class="col-sm-6  <?php echo $animation1; ?>">
-	                                    <?php the_title( '<h3 class="entry-title">', '</h3>' ); ?>
+                                    <div class="col-md-6  <?php echo $animation1; ?>">
+                                        
+                                        <?php
+                                            if( ! empty( $page_title ) ){
+                                                echo "<div class='accordion_title'>";
+                                                echo $args['before_title'] . esc_html( $page_title ) . $args['after_title'];
+                                                echo "</div>";
+                                            }
+                                        ?>
+
                                         <div class="contact-page-content">
 		                                    <?php
 		                                    the_content();

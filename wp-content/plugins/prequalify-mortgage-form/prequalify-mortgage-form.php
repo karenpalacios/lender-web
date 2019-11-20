@@ -49,6 +49,7 @@ function wpb_load_widget() {
 
 function add_css_files() {
     wp_enqueue_style('pmf_css_steps', plugins_url('/dist/styles/jquery.steps.css',__FILE__)); 
+    wp_enqueue_style('pmf_css_slide', plugins_url('/dist/styles/jquery-ui.css',__FILE__)); 
     wp_enqueue_style('pmf_css_main', plugins_url('/dist/styles/main.css',__FILE__));
 }
 

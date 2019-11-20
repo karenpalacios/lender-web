@@ -1067,7 +1067,6 @@ class Gutentor_Hooks {
 			$button_css                  = GutentorButtonCss($button);
 
         }
-
 		/* Single Item Box padding/margin */
 		$single_item_Box_margin  = isset($attributes['blockSingleItemBoxMargin']) ? $attributes['blockSingleItemBoxMargin'] : '';
 		$single_item_Box_padding = isset($attributes['blockSingleItemBoxPadding']) ? $attributes['blockSingleItemBoxPadding'] : '';

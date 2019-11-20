@@ -23,7 +23,7 @@
 }
 
 #mortgage-form .budget-container {
-    width: 550px !important;
+    width: 550px;
     margin: 0 auto;
     text-align: center;
 }
@@ -125,6 +125,8 @@
 
 #mortgage-form .data-client-container {
     text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 #mortgage-form .data-client-container input::placeholder {
@@ -151,4 +153,62 @@
     display: none;
     font-size: 1.7em;
     font-family: sans-serif;
+}
+
+@media screen and (max-width:720px){
+
+    #mortgage-form h4 {
+        font-size: 1.6em;
+        margin-bottom: 0.8em;
+    }
+
+    #mortgage-form .btn-answer {
+        border: 5px solid rgba(0,0,0,0.3);
+        width: 110px;
+        height: 110px;
+        margin: 0 5px;
+    }
+    #mortgage-form .budget-container {
+        width: 310px;
+    }
+
+    #mortgage-form #client_name, #mortgage-form #client_phone {
+        width: 100%;
+    }
+
+    #mortgage-form .btn-answer-container, #mortgage-form .credit-score-container {
+        flex-wrap: wrap;
+    }
+
+    #mortgage-form .credit-score-container .btn-answer {
+        width: 95px;
+        height: 95px;
+    }
+
+    #mortgage-form .btn-continue {
+        width: 90%;
+    }
+
+    #mortgage-form .title-loan-type,
+    #mortgage-form .title-property-type,
+    #mortgage-form .title-budget{
+        margin-top: 2em;
+    }
+
+    #mortgage-form #client_email,
+    #mortgage-form #client_name, 
+    #mortgage-form #client_phone {
+        width: 90%;
+        margin: 0px 0px 10px 0px;
+    }
+
+    #mortgage-form .pmf_success {
+        font-size: 1.4em;
+        line-height: 1.1em;
+    }
+
+    #mortgage-form .pmf_error {
+        padding-bottom: 10px;
+    }
+
 }

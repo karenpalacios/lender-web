@@ -524,7 +524,7 @@ if (!function_exists('gutentor_typography_options_css')) {
         $typography_data .= gutentor_generate_css('text-transform', ('default' !== $font_type && $text_transform) ? $text_transform : null);
         $typography_data .= gutentor_generate_css('font-style', ('default' !== $font_type && $font_style && 'default' !== $font_style) ? $font_style : null);
         $typography_data .= gutentor_generate_css('text-decoration', ('default' !== $font_type && $text_decoration && 'default' !== $text_decoration) ? $text_decoration : null);
-        $typography_data .= gutentor_generate_css('line-height', ('default' !== $font_type && $line_height) ? $line_height : null);
+	    $typography_data  .= gutentor_generate_css('line-height', ('default' !== $font_type && $line_height) ? strval($line_height) : null);
         $typography_data .= gutentor_generate_css('letter-spacing', ('default' !== $font_type && $letter_spacing) ? $letter_spacing . 'px' : null);
 
         return $typography_data;
@@ -588,7 +588,7 @@ if (!function_exists('gutentor_typography_options_responsive_css')) {
         }
 
         $typography_data = gutentor_generate_css('font-size', ('default' !== $font_type && $font_size) ? $font_size . 'px' : null);
-        $typography_data .= gutentor_generate_css('line-height', ('default' !== $font_type && $line_height) ? $line_height : null);
+        $typography_data .= gutentor_generate_css('line-height', ('default' !== $font_type && $line_height) ? strval($line_height) : null);
         $typography_data .= gutentor_generate_css('letter-spacing', ('default' !== $font_type && $letter_spacing) ? $letter_spacing . 'px' : null);
 
         return $typography_data;

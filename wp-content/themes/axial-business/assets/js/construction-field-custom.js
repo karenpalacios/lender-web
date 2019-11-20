@@ -233,12 +233,21 @@ jQuery(document).ready(function($){
 
         $('.glsr-reviews').slick({
           slidesToShow: 4,
-          autoplay: false,
+          autoplay: true,
           adaptiveHeight: true,
-          autoplaySpeed: 4000,
+          autoplaySpeed: 5000,
+          touchThreshold: 10,
           prevArrow: '<i class="review-arrow review-prev fa fa-angle-left"></i>',
           nextArrow: '<i class="review-arrow review-next fa fa-angle-right"></i>',          
           responsive: [
+            {
+              breakpoint: 1025,
+              settings: {
+                arrows: true,
+                centerPadding: '10px',
+                slidesToShow: 3
+              }
+            },
             {
               breakpoint: 768,
               settings: {
