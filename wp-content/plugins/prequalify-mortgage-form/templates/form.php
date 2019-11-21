@@ -106,10 +106,10 @@
         <h3>Finish</h3>
         <section>
             <h4>Ready to get preapproved?</h4>
-            <div class="pmf_error" >Please fill all fields below</div>
+            <div class="pmf_error" >Please complete all fields below</div>
             <div class="pmf_success">
                 <img alt="" class="icon" height="100" src="<?php print $images_path; ?>sended.png" width="100">
-                Your Form has been successfully submitted!
+                Your form has been successfully submitted!
             </div>
             <div class="data-client-container">
                 <input id="client_name" placeholder="Full Name" name="client_name" type="text">
