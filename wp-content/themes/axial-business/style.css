@@ -1312,6 +1312,10 @@ i.slick-arrow{
 	    margin: 0em;
 	    min-height: 17em;
 	}
+
+	.top-header .text-right {
+		padding:0px;
+	}
 }
 /*button style*/
 .at-btn-wrap {
