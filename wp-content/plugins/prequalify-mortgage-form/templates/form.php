@@ -1,8 +1,8 @@
 <form id="mortgage-form" method="POST" action="<?php print esc_url( $_SERVER['REQUEST_URI'] ) ?>" >
     <h2>Get Pre-Qualified For A Home Loan</h2>
-    <div>
-        <h3>What type of loan are you looking for?</h3>
-        <section>
+    <div class="wizard clearfix" >
+        <h3 hidden>What type of loan are you looking for?</h3>
+        <section class="content clearfix" >
             <h4 class="title-loan-type">What type of loan are you looking for?</h4>
             <div class="btn-answer-container actions">
                 <a href="#next" class="btn-type btn-answer" data-value="Purchase">
@@ -26,8 +26,8 @@
                 <input id="loan_type" class="answer" name="loan_type" type="hidden">
             </div>
         </section>
-        <h3>How will you use the property?</h3>
-        <section>
+        <h3 hidden>How will you use the property?</h3>
+        <section hidden>
             <h4 class="title-property-type" >How will you use the property?</h4>
             <div class="btn-answer-container actions">
                 <a href="#next" class="btn-type btn-answer" data-value="Primary Home">
@@ -60,8 +60,8 @@
                 <input id="property_type" class="answer" name="property_type" type="hidden">
             </div>
         </section>
-        <h3>What's your budget?</h3>
-        <section>
+        <h3 hidden>What's your budget?</h3>
+        <section hidden>
             <h4 class="title-budget">What's your budget?</h4>
             <div class="budget-container actions">
                 <div id="slider-range"></div>
@@ -71,8 +71,8 @@
                 </a>
             </div>
         </section>
-        <h3>Estimate your credit score?</h3>
-        <section>
+        <h3 hidden>Estimate your credit score?</h3>
+        <section hidden>
             <h4>Estimate your credit score</h4>
             <div class="credit-score-container actions">
                 <a href="#next" class="btn-type btn-answer" data-value="740+">
@@ -103,8 +103,8 @@
                 <input id="credit_score" class="answer" name="credit_score" type="hidden">
             </div>
         </section>
-        <h3>Finish</h3>
-        <section>
+        <h3 hidden>Finish</h3>
+        <section hidden>
             <h4>Ready to get preapproved?</h4>
             <div class="pmf_error" >Please complete all fields below</div>
             <div class="pmf_success">
