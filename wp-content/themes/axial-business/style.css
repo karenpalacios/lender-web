@@ -1308,12 +1308,13 @@ i.slick-arrow{
 	    padding: 5px 0;
 	}
 	.info-icon-details .icon-title {
-		font-size: 25px;
-		margin: 0;
-		color: #fff;
+		font-size: 17px;
 		font-weight: 400;
-		line-height: normal;
 	}
+	.info-icon-details .icon-title {
+		font-size: 17px;
+		font-weight: 400;
+	}	
 	.info-icon-box .info-icon .fa {
 		font-size: 24px;
 	}
