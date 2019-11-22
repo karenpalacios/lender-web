@@ -1149,6 +1149,9 @@ object {
 	font-weight: 400;
 	line-height: normal;
 }
+.icon-title a {
+    color: #FFF;
+}
 .alternative-info-menu .info-icon-details .icon-title{
 	color: #000;
 }
