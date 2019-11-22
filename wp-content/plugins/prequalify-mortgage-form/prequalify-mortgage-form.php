@@ -41,6 +41,8 @@ function pmf_proccess_form() {
     } else {
         $results = "The mail could not be sent.";
     }
+
+    return $results;
 }
 
 function wpb_load_widget() {

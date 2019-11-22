@@ -3534,6 +3534,15 @@ article.page .post-thumb a{
     background: #f7f7f7;
 }
 
+#page-id-27 .entry-content {
+    -moz-column-count: 1;
+    -moz-column-gap: 0px;
+    -moz-column-rule: none;
+    -webkit-column-count: 1;
+    -webkit-column-gap: 0;
+    -webkit-column-rule: none;
+}
+
 @media (max-width: 991px){
 
 	img.custom-logo {
