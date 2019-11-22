@@ -17,16 +17,24 @@ jQuery(document).ready( function($) {
             $( "#slider-range" ).slider({
                 range: true,
                 min: 0,
-                max: 5000000,
+                max: 3000000,
                 step: 1000,
                 values: [ 300000, 1000000 ],
                 slide: function( event, ui ) {
-                    $( "#amount" ).val( "$" + formatter.format(ui.values[ 0 ]) + " - $" + formatter.format(ui.values[ 1 ]) );
+
+                    $suffix = ' ';
+
+                    if(ui.values[ 1 ] == 3000000) {
+                        $suffix = ' + ';
+                    }
+
+                    $( "#amount" ).val( "$" + formatter.format(ui.values[ 0 ]) + " - $" + formatter.format(ui.values[ 1 ])  + $suffix );
+
                 }
             });
 
             $( "#amount" ).val( "$" + formatter.format($( "#slider-range" ).slider( "values", 0 )) +
-              " - $" + formatter.format($( "#slider-range" ).slider( "values", 1 )) );
+              " - $" + formatter.format($( "#slider-range" ).slider( "values", 1 )));
 
             $(".btn-answer").on('click', function() {
                 $(this).addClass("selected");
