@@ -1125,29 +1125,29 @@ object {
 }
 .info-icon-box{
 	opacity: 1;
-	padding: 10px 0;
+	padding: 5px 0;
 	position: relative;
 }
 .alternative-info-menu .info-icon-box{
 	padding: 0;
 }
 .info-icon-box .info-icon {
-	margin-left: 15px;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+	margin-right: 10px;
 }
 .info-icon-box .info-icon .fa {
 	font-size: 24px;
 }
 .info-icon-details{
-	margin-left: 50px;
+	display: flex;
+    margin: 0 auto;
+    justify-content: center;
 }
 .info-icon-details .icon-title {
-	font-size: 14px;
+	font-size: 16px;
 	margin: 0;
 	color: #fff;
 	font-weight: 400;
+	line-height: normal;
 }
 .alternative-info-menu .info-icon-details .icon-title{
 	color: #000;
@@ -2715,6 +2715,7 @@ article.page .post-thumb a{
 	width: 90%;
 	font-weight: 300;
 }
+
 .wpcf7-form input.wpcf7-submit {
 	border: medium none;
 	color: #ffffff;
@@ -2748,6 +2749,18 @@ article.page .post-thumb a{
 .wpcf7-not-valid-tip{
 	display: none !important;
 }
+
+@media (max-width: 599px) {
+	.wpcf7-form label{
+		width: 100%;
+	}
+
+	.wpcf7-form input.wpcf7-submit {
+		width: 100%;
+	}
+}
+
+
 /*breadcrumbs*/
 #construction-field-breadcrumbs{
 	padding: 0;

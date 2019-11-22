@@ -74,19 +74,20 @@ if ( !function_exists('construction_field_feature_info') ) :
 			?>
             <div class="info-icon-box <?php echo esc_attr( $col );?>">
 				<?php
-				if( !empty( $base_basic_info_data['icon'])){
-					?>
-                    <div class="info-icon">
-                        <i class="fa <?php echo esc_attr( $base_basic_info_data['icon'] );?>"></i>
-                    </div>
-					<?php
-				}
+				
 				if( !empty( $base_basic_info_data['title']) || !empty( $base_basic_info_data['desc']) ){
 					?>
                     <div class="info-icon-details">
 						<?php
+						if( !empty( $base_basic_info_data['icon'])){
+							?>
+		                    <div class="info-icon">
+		                        <i class="fa <?php echo esc_attr( $base_basic_info_data['icon'] );?>"></i>
+		                    </div>
+							<?php
+						}
 						if( !empty( $base_basic_info_data['title']) ){
-							echo '<h6 class="icon-title">'.esc_html( $base_basic_info_data['title'] ).'</h6>';
+							echo '<h6 class="icon-title">' . $base_basic_info_data['title'] . '</h6>';
 						}
 						if( !empty( $base_basic_info_data['desc']) ){
 							echo '<span class="icon-desc">'.wp_kses_post( $base_basic_info_data['desc'] ).'</span>';
