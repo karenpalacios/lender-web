@@ -42,8 +42,20 @@ jQuery(document).ready( function($) {
         var cn = $('#mortgage-form #client_name').val();
         var ce = $('#mortgage-form #client_email').val()
         var cp = $('#mortgage-form #client_phone').val();
-        if( cn == "" || ce == ""  || cp == "") { 
-            $('#mortgage-form .pmf_error').show();
+
+        var reg_email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        var reg_phone = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+
+        if( cn == "" || ce == ""  || cp == "") {
+            $('#mortgage-form .pmf_error').html("Please complete all fields below.").show();
+            $('#mortgage-form .pmf_success').hide();
+        }
+        else if (!reg_email.test(ce)) {
+            $('#mortgage-form .pmf_error').html("You have entered an invalid email address.").show();
+            $('#mortgage-form .pmf_success').hide();
+        }
+        else if (!reg_phone.test(cp)) {
+            $('#mortgage-form .pmf_error').html("You have entered an invalid phone number.").show();
             $('#mortgage-form .pmf_success').hide();
         } else {
             $('#mortgage-form .pmf_error').hide();

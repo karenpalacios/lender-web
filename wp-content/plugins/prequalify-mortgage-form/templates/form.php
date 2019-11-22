@@ -106,7 +106,7 @@
         <h3 hidden>Finish</h3>
         <section hidden>
             <h4>Ready to get preapproved?</h4>
-            <div class="pmf_error" >Please complete all fields below</div>
+            <div class="pmf_error" ></div>
             <div class="pmf_success">
                 <img alt="" class="icon" height="100" src="<?php print $images_path; ?>sended.png" width="100">
                 Your form has been successfully submitted!

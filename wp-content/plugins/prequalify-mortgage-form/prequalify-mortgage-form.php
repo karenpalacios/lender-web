@@ -17,21 +17,21 @@ function pmf_proccess_form() {
     parse_str($_POST['values'], $values);
     
     foreach( $values as $key => $value ) {
-        $values[$key] = urldecode($value);
+        $values[$key] = sanitize_text_field(urldecode($value));
     }
 
     $content = '';
 
-    $content.= '\nMortgage Type: ' . $values['loan_type'];
-    $content.= '\nProperty Type: ' . $values['property_type'];
-    $content.= '\nBudget: ' . $values['amount'];
-    $content.= '\nCredit Score: ' . $values['credit_score'];
+    $content.= '<p>' . 'Mortgage Type: ' . $values['loan_type'] . '/<p>';
+    $content.= '<p>' . 'Property Type: ' . $values['property_type'] . '/<p>';
+    $content.= '<p>' . 'Budget: ' . $values['amount'] . '/<p>';
+    $content.= '<p>' . 'Credit Score: ' . $values['credit_score'] . '/<p>';
 
-    $content.= '\nName: ' . $values['client_name'];
-    $content.= '\nPhone: ' . $values['client_phone'];
-    $content.= '\nEmail: ' . $values['client_email'];
+    $content.= '<p>' . 'Name: ' . $values['client_name'] . '/<p>';
+    $content.= '<p>' . 'Phone: ' . $values['client_phone'] . '/<p>';
+    $content.= '<p>' . 'Email: ' . $values['client_email'] . '/<p>';
 
-    $headers = 'From:'.$email. "rn";
+    $headers = array('Content-Type: text/html; charset=UTF-8');
     $admin_email = get_option('admin_email');
     $subject = 'New Pre-Qualification Contact';
     
@@ -42,7 +42,7 @@ function pmf_proccess_form() {
         $results = "The mail could not be sent.";
     }
 
-    return $results;
+    echo $results;
 }
 
 function wpb_load_widget() {
