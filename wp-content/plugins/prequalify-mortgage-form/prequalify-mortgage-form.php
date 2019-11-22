@@ -22,14 +22,14 @@ function pmf_proccess_form() {
 
     $content = '';
 
-    $content.= '<p>' . 'Mortgage Type: ' . $values['loan_type'] . '/<p>';
-    $content.= '<p>' . 'Property Type: ' . $values['property_type'] . '/<p>';
+    $content.= '<p>' . 'Mortgage Type: ' . $values['loan_type'] . '</p>';
+    $content.= '<p>' . 'Property Type: ' . $values['property_type'] . '</p>';
     $content.= '<p>' . 'Budget: ' . $values['amount'] . '/<p>';
-    $content.= '<p>' . 'Credit Score: ' . $values['credit_score'] . '/<p>';
+    $content.= '<p>' . 'Credit Score: ' . $values['credit_score'] . '</p>';
 
-    $content.= '<p>' . 'Name: ' . $values['client_name'] . '/<p>';
-    $content.= '<p>' . 'Phone: ' . $values['client_phone'] . '/<p>';
-    $content.= '<p>' . 'Email: ' . $values['client_email'] . '/<p>';
+    $content.= '<p>' . 'Name: ' . $values['client_name'] . '</p>';
+    $content.= '<p>' . 'Phone: ' . $values['client_phone'] . '</p>';
+    $content.= '<p>' . 'Email: ' . $values['client_email'] . '</p>';
 
     $headers = array('Content-Type: text/html; charset=UTF-8');
     $admin_email = get_option('admin_email');

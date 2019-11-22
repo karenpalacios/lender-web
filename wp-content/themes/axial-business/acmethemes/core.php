@@ -160,6 +160,8 @@ function construction_field_scripts() {
 
 	/*theme custom js*/
     wp_enqueue_script('construction-field-custom', get_template_directory_uri() . '/assets/js/construction-field-custom.js', array('jquery'), '1.0.5', 1);
+    wp_enqueue_script('mortgage-amortization', get_template_directory_uri() . '/assets/js/mortgage-amortization.js', array( 'jquery' ), '1.0.0' );
+    wp_enqueue_script('mortgage-payment', get_template_directory_uri() . '/assets/js/mortgage-payment.js', array( 'jquery' ), '1.0.0' );
 
 	wp_localize_script( 'construction-field-custom', 'construction_field_ajax', array(
 		'ajaxurl'           => admin_url( 'admin-ajax.php' )

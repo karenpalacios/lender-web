@@ -3534,7 +3534,9 @@ article.page .post-thumb a{
     background: #f7f7f7;
 }
 
-.post-27 .entry-content {
+.post-27 .entry-content,
+.post-643 .entry-content, {
+.post-646 .entry-content {
     -moz-column-count: 1;
     -moz-column-gap: 0px;
     -moz-column-rule: none;
