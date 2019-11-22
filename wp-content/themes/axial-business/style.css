@@ -1370,6 +1370,8 @@ i.slick-arrow{
 	border-radius: 4px;
 	font-size: 14px;
 	padding: 9px 14px;
+    white-space: normal;
+
 }
 .at-btn-wrap .btn,
 .slider-content .btn {
