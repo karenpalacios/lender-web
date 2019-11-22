@@ -1291,6 +1291,10 @@ i.slick-arrow{
 	opacity: 1;
 }
 
+.at-absolute-feature-icon > div > div:nth-child(2) > div > h6 > a {
+	font-weight: normal;
+}
+
 /*extra small device*/
 @media (max-width: 1230px) {
 	.image-slider-wrapper .banner-title {
