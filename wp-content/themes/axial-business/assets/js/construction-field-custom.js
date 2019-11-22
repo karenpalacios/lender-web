@@ -270,6 +270,10 @@ jQuery(document).ready(function($){
           ]
         });
 
+        $('.glsr-reviews').on('init', function(event, slick, direction){
+            $('.glsr-reviews .glsr-review').show();
+        });
+
         $('.glsr-review .glsr-read-more a').colorbox({
             transition:"fade", 
             html: function() {

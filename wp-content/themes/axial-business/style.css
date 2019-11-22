@@ -303,6 +303,7 @@ address {
 	outline: medium none;
 	transition: all 0.2s ease-out 0s;
 	padding: 2px 10px;
+	margin-right: 0px;
 }
 .navbar .navbar-toggle .icon-bar {
 	background-color: #3a3a3a;
@@ -1311,6 +1312,9 @@ i.slick-arrow{
 	.info-icon-box {
 	    padding: 5px 0;
 	}
+	.info-icon-box:first-child {
+	    padding-bottom: 0px;
+	}
 	.info-icon-details .icon-title {
 		font-size: 17px;
 		font-weight: 400;
@@ -1320,7 +1324,8 @@ i.slick-arrow{
 		font-weight: 400;
 	}	
 	.info-icon-box .info-icon .fa {
-		font-size: 24px;
+		font-size: 18px;
+    	padding-top: 5px;
 	}
 
 }
@@ -3365,6 +3370,10 @@ article.page .post-thumb a{
     overflow: hidden;
     text-align: center;
 }
+
+/*.glsr-reviews .glsr-review:nth-child(-n+4){
+    display: none;
+}*/
 
 .glsr-default .glsr-review-author {
     font-weight: bold;

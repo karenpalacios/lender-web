@@ -120,8 +120,26 @@
 }
 
 #mortgage-form .actions  ul {
-    display: none;
+    display: flex;
+    justify-content: center;
 }
+
+#mortgage-form .actions  ul li a{
+    background: transparent;
+}
+
+#mortgage-form .actions  ul li{
+    display: none !important;
+}
+
+#mortgage-form .actions  ul li:first-child{
+    display: block !important;
+}
+
+#mortgage-form .actions  ul li.disabled{
+    display: none !important;
+}
+
 
 #mortgage-form .data-client-container {
     text-align: center;

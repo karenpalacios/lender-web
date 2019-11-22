@@ -5,6 +5,9 @@ jQuery(document).ready( function($) {
         headerTag: "h3",
         bodyTag: "section",
         transitionEffect: "slideLeft",
+        labels: {
+            previous: "< Back",
+        },
         onInit: function(event, currentIndex) {
             var choose_answer = function(choice) {
                 choice.parent().find(".answer").val(choice.attr('data-value')); 
