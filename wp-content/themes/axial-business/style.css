@@ -1125,7 +1125,7 @@ object {
 }
 .info-icon-box{
 	opacity: 1;
-	padding: 5px 0;
+	padding: 10px 0;
 	position: relative;
 }
 .alternative-info-menu .info-icon-box{
@@ -1135,15 +1135,16 @@ object {
 	margin-right: 10px;
 }
 .info-icon-box .info-icon .fa {
-	font-size: 24px;
+	font-size: 30px;
 }
 .info-icon-details{
 	display: flex;
     margin: 0 auto;
     justify-content: center;
 }
+
 .info-icon-details .icon-title {
-	font-size: 16px;
+	font-size: 22px;
 	margin: 0;
 	color: #fff;
 	font-weight: 400;
@@ -1303,6 +1304,20 @@ i.slick-arrow{
 	.info-icon-box-wrapper .info-icon-box {
 	    border-right: none;
 	}
+	.info-icon-box {
+	    padding: 5px 0;
+	}
+	.info-icon-details .icon-title {
+		font-size: 25px;
+		margin: 0;
+		color: #fff;
+		font-weight: 400;
+		line-height: normal;
+	}
+	.info-icon-box .info-icon .fa {
+		font-size: 24px;
+	}
+
 }
 
 @media screen and (max-width:720px){
