@@ -1240,7 +1240,7 @@ object {
 }
 .slick-arrow {
 	position: absolute;
-	top: 50%;
+	top: 35%;
 	z-index: 9;
 	opacity: 0.7;
 	cursor: pointer;
@@ -3572,6 +3572,9 @@ article.page .post-thumb a{
     -webkit-column-count: 2;
     -webkit-column-gap: 88px;
     -webkit-column-rule: 1px solid #c4c8cc;
+}
+
+.entry-content p{
     text-align: justify;
 }
 
