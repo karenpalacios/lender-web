@@ -1106,7 +1106,15 @@ object {
 	.top-header .text-right,
 	.top-header .text-left {
 		text-align: center;
-		font-size: 0.9em;
+		font-size: 11px;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	.top-header .text-right,
+	.top-header .text-left {
+		text-align: center;
+		font-size: 9px;
 	}
 }
 
@@ -1316,7 +1324,7 @@ i.slick-arrow{
 	    padding-bottom: 0px;
 	}
 	.info-icon-details .icon-title {
-		font-size: 17px;
+		font-size: 16px;
 		font-weight: 400;
 	}
 	.info-icon-details .icon-title {
@@ -1362,6 +1370,20 @@ i.slick-arrow{
 		padding:0px;
 	}
 }
+
+@media screen and (max-width:320px){
+	.info-icon-details .icon-title {
+		font-size: 12px;
+		font-weight: 400;
+	}
+
+	.image-slider-wrapper .slider-content {
+	    transform: translateY(-60%);
+	}
+}
+
+
+
 /*button style*/
 .at-btn-wrap {
 	text-align: center;

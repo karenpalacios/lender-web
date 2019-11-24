@@ -230,3 +230,34 @@
     }
 
 }
+
+
+@media screen and (max-width:320px) {
+
+    #mortgage-form h2 {
+        font-size: 0.8em;
+    }
+
+    #mortgage-form .btn-answer {
+        width: 105px;
+        height: 105px;
+    }
+
+    #mortgage-form .title-loan-type, #mortgage-form .title-property-type, #mortgage-form .title-budget {
+        margin-top: 1.2em;
+    }
+
+    #mortgage-form h4 {
+        font-size: 1.2em;
+        margin-bottom: 0.5em;
+    }
+
+    #mortgage-form .credit-score-container .btn-answer {
+        width: 85px;
+        height: 85px;
+    }
+    .wizard > .content {
+        margin: 0em;
+        min-height: 20em;
+    }
+}
