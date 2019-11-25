@@ -1735,19 +1735,19 @@ a.more-link::after {
 }
 .team-item img{
 	width: 100%;
-	transition: all 0.5s ease-in-out 0s;
+	/*transition: all 0.5s ease-in-out 0s;
 	-webkit-transition:all 0.5s ease-in-out 0s;
 	-moz-transition:all 0.5s ease-in-out 0s;
 	-webkit-transform: scale(1);
 	-ms-transform: scale(1);
 	-o-transform: scale(1);
-	transform: scale(1);
+	transform: scale(1);*/
 }
 .team-item:hover img{
-	-webkit-transform: scale(1.3);
+	/*-webkit-transform: scale(1.3);
 	-ms-transform: scale(1.3);
 	-o-transform: scale(1.3);
-	transform: scale(1.3);
+	transform: scale(1.3);*/
 }
 .team-item:hover{
 	-webkit-box-shadow: 0 0 10px rgba(0,0,0,.2);
