@@ -89,25 +89,6 @@ if ( ! function_exists( 'construction_field_dynamic_css' ) ) :
 			 .primary-color,
 			 article.post .entry-header .cat-links a,
 			 #construction-field-breadcrumbs a:hover,
-			 .woocommerce .star-rating, 
-            .woocommerce ul.products li.product .star-rating,
-            .woocommerce p.stars a,
-            .woocommerce ul.products li.product .price,
-            .woocommerce ul.products li.product .price ins .amount,
-            .woocommerce a.button.add_to_cart_button:hover,
-            .woocommerce a.added_to_cart:hover,
-            .woocommerce a.button.product_type_grouped:hover,
-            .woocommerce a.button.product_type_external:hover,
-            .woocommerce .cart .button:hover,
-            .woocommerce .cart input.button:hover,
-            .woocommerce #respond input#submit.alt:hover,
-			.woocommerce a.button.alt:hover,
-			.woocommerce button.button.alt:hover,
-			.woocommerce input.button.alt:hover,
-			.woocommerce .woocommerce-info .button:hover,
-			.woocommerce .widget_shopping_cart_content .buttons a.button:hover,
-			.woocommerce div.product .woocommerce-tabs ul.tabs li a,
-			.woocommerce-message::before,
 			i.slick-arrow:hover,
 			.single-item .fa{
                 color: {$construction_field_primary_color};
@@ -130,63 +111,13 @@ if ( ! function_exists( 'construction_field_dynamic_css' ) ) :
 			.schedule-title-wrapper .schedule-title:hover a,
 			.navigation.pagination .nav-links .page-numbers.current,
 			.navigation.pagination .nav-links a.page-numbers:hover,
-			.woocommerce .product .onsale,
-			.woocommerce a.button.add_to_cart_button,
-			.woocommerce a.added_to_cart,
-			.woocommerce a.button.product_type_grouped,
-			.woocommerce a.button.product_type_external,
-			.woocommerce .single-product #respond input#submit.alt,
-			.woocommerce .single-product a.button.alt,
-			.woocommerce .single-product button.button.alt,
-			.woocommerce .single-product input.button.alt,
-			.woocommerce #respond input#submit.alt,
-			.woocommerce a.button.alt,
-			.woocommerce button.button.alt,
-			.woocommerce input.button.alt,
-			.woocommerce .widget_shopping_cart_content .buttons a.button,
-			.woocommerce div.product .woocommerce-tabs ul.tabs li:hover,
-			.woocommerce div.product .woocommerce-tabs ul.tabs li.active,
-			.woocommerce .cart .button,
-			.woocommerce .cart input.button,
-			.woocommerce input.button:disabled, 
-			.woocommerce input.button:disabled[disabled],
-			.woocommerce input.button:disabled:hover, 
-			.woocommerce input.button:disabled[disabled]:hover,
-			 .woocommerce nav.woocommerce-pagination ul li a:focus, 
-			 .woocommerce nav.woocommerce-pagination ul li a:hover, 
-			 .woocommerce nav.woocommerce-pagination ul li span.current,
-			 .woocommerce a.button.wc-forward,
-			 .woocommerce .widget_price_filter .ui-slider .ui-slider-range,
-			 .woocommerce .widget_price_filter .ui-slider .ui-slider-handle,
 			 .navbar .cart-wrap .acme-cart-views a span,
 			 .acme-gallery .read-more{
                 background-color: {$construction_field_primary_color};
                 color:#fff;
             }";
 
-        /*borders*/
-	    $custom_css .= "
-            .woocommerce .cart .button, 
-            .woocommerce .cart input.button,
-            .woocommerce a.button.add_to_cart_button,
-            .woocommerce a.added_to_cart,
-            .woocommerce a.button.product_type_grouped,
-            .woocommerce a.button.product_type_external,
-            .woocommerce .cart .button,
-            .woocommerce .cart input.button
-            .woocommerce .single-product #respond input#submit.alt,
-			.woocommerce .single-product a.button.alt,
-			.woocommerce .single-product button.button.alt,
-			.woocommerce .single-product input.button.alt,
-			.woocommerce #respond input#submit.alt,
-			.woocommerce a.button.alt,
-			.woocommerce button.button.alt,
-			.woocommerce input.button.alt,
-			.woocommerce .widget_shopping_cart_content .buttons a.button,
-			.woocommerce div.product .woocommerce-tabs ul.tabs:before{
-                border: 1px solid {$construction_field_primary_color};
-            }";
-        $custom_css .= "
+       $custom_css .= "
             .blog article.sticky{
                 border-bottom: 2px solid {$construction_field_primary_color};
             }";

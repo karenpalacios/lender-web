@@ -185,7 +185,7 @@ if ( ! class_exists( 'Construction_Field_Feature' ) ) {
                             <?php
                             if( !empty( $button_one_text ) ){
                                 ?>
-                                <a href="<?php echo $button_one_url; ?>" class="init-animate zoomIn btn btn-primary btn-reverse outline-outward banner-btn">
+                                <a target="_blank" href="<?php echo $button_one_url; ?>" class="init-animate zoomIn btn btn-primary btn-reverse outline-outward banner-btn">
                                     <?php echo $button_one_text;?>
                                     <i class="fa fa-angle-double-right"></i>
                                 </a>
